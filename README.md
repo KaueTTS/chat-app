@@ -19,7 +19,7 @@
 ## Tecnologias
 
 <div width="140px">
-    <img src="https://skillicons.dev/icons?i=python,vscode" />
+    <img src="https://skillicons.dev/icons?i=python,vscode,html" />
 </div>
 
 ## Projeto em funcionamento
@@ -29,16 +29,23 @@
 ```
 < INSTALADORES >
 
+pip install
 python -m venv venv
+pip install flask flask_socketio
 
 
 < INICIADORES >
 
+Ativar: .\venv\Scripts\activate
+Desativar: deactivate
 
 ```
 
 > **1**: Abra o projeto no VsCode.<br>
-> **2**: Instale o `python -m venv venv`.<br>
+> **2**: Instale o python com `pip install`.<br>
+> **3**: Instale o `python -m venv venv`.<br>
+> **4**: Rode no terminal o comando `.\venv\Scripts\activate`.<br>
+> **5**: Instale o `pip install flask flask_socketio`.
 
 ## Colaboradores
 
