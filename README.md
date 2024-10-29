@@ -29,7 +29,7 @@
 ```
 < INSTALADORES >
 
-
+python -m venv venv
 
 
 < INICIADORES >
@@ -37,7 +37,8 @@
 
 ```
 
-> **1**: Abra o projeto no VsCode<br>
+> **1**: Abra o projeto no VsCode.<br>
+> **2**: Instale o `python -m venv venv`.<br>
 
 ## Colaboradores
 
