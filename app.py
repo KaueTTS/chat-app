@@ -35,9 +35,13 @@ def handle_disconnect():
 
 @socketio.on("send_message")
 def handle_message(data):
-        user = user.get(request)
+        user = user.get(request.sid)
         if user:
-                emit("new_message")
+                emit("new_message", {
+                        "username":user["username"],
+                        "avatar":user["avatar"],
+                        "message":data["message"]
+                }, broadcast=True)
 
 
 if __name__ == "__main__":
