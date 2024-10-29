@@ -38,6 +38,7 @@ pip install flask flask_socketio
 
 Ativar: .\venv\Scripts\activate
 Desativar: deactivate
+python ./app.py
 
 ```
 
@@ -45,7 +46,8 @@ Desativar: deactivate
 > **2**: Instale o python com `pip install`.<br>
 > **3**: Instale o `python -m venv venv`.<br>
 > **4**: Rode no terminal o comando `.\venv\Scripts\activate`.<br>
-> **5**: Instale o `pip install flask flask_socketio`.
+> **5**: Instale o `pip install flask flask_socketio`.<br>
+> **6**:
 
 ## Colaboradores
 
