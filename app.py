@@ -5,14 +5,14 @@ import random
 app = Flask(__name__)
 socketio = SocketIO(app)
 
-#
+
 users = {}
 
 @app.route('/')
 def index():
         return render_template('index.html')
 
-#
+
 @socketio.on("connect")
 def handle_connect():
         username = f"User_{random.randint(1000,9999)}"
@@ -25,6 +25,7 @@ def handle_connect():
         emit("user_joined", {"username":username,"avatar":avatar_url},broadcast=True)
 
         emit("set_username", {"username":username})
+
 
 @socketio.on("disconnect")
 def handle_disconnect():
@@ -42,6 +43,18 @@ def handle_message(data):
                         "avatar":user["avatar"],
                         "message":data["message"]
                 }, broadcast=True)
+
+
+@socketio.on("update_username")
+def handle_update_username(data):
+        old_username = users[request.sid]["username"]
+        new_username = data["username"]
+        users[request.sid]["username"] = new_username
+
+        emit("username_updated", {
+                "old_username":old_username,
+                "new_username":new_username
+        }, broadcast=True)
 
 
 if __name__ == "__main__":
