@@ -19,7 +19,7 @@
 ## Tecnologias
 
 <div width="140px">
-    <img src="https://skillicons.dev/icons?i=python,vscode,html,flask" />
+    <img src="https://skillicons.dev/icons?i=python,vscode,html,flask,css" />
 </div>
 
 ## Projeto em funcionamento
