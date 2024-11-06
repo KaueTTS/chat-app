@@ -193,6 +193,10 @@
         socket.on("user_left", data => {
             addMessage(`${data.username} left the chat`, "system")
         })
+
+        socket.on("new_message", data => {
+            addMessage(data.message, "user", data.username, data.avatar)
+        })
     </script>
 </body>
 </html>
