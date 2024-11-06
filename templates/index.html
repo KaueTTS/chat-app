@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Chat App</title>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
@@ -194,8 +193,17 @@
             addMessage(`${data.username} left the chat`, "system")
         })
 
-        socket.on("new_message", data => {
+        socket.on("new_message", (data) => {
             addMessage(data.message, "user", data.username, data.avatar)
+        })
+
+        socket.on("username_update", (data) => {
+            addMessage(`${data.old_username} changed their name to ${data.new_username}`, "system")
+
+            if (data.old_username === currentUsername) {
+                currentUsername = data.new_username
+                currentUsernameSpan.textContent = `Your username: ${currentUsername}`
+            }
         })
     </script>
 </body>
