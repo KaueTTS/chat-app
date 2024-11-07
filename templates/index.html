@@ -19,6 +19,9 @@
 			}
 
 			body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
 				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 				margin: 0;
 				padding: 0;
@@ -27,8 +30,7 @@
 			}
 
 			.chat-container {
-				max-width: 800px;
-				margin: 20px auto;
+                width: 50%;
 				background-color: white;
 				border-radius: 15px;
 				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -38,14 +40,14 @@
 			.chat-header {
 				background-color: var(--primary-color);
 				color: white;
-				padding: 20px;
+				padding: 18px;
 				text-align: center;
 				font-size: 24px;
 				font-weight: bold;
 			}
 
 			.chat-messages {
-				height: 400px;
+				height: 350px;
 				overflow-y: auto;
 				padding: 20px;
 				background-color: var(--secondary-color);
@@ -153,6 +155,23 @@
 				margin-right: 0;
 				margin-left: 10px;
 			}
+
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: var(--primary-color);
+                border-radius: 5px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--primary-dark);
+            }
     </style>
 
 </head>
