@@ -232,8 +232,9 @@
             }
         }
 
-        function addMessage(message,type,username="",avatar="") {
+        function addMessage(message, type, username="", avatar="") {
             const messageElement = document.createElement("div")
+            messageElement.className = "message";
 
             if(type === "user") {
                 const isSentMessage = username === currentUsername
