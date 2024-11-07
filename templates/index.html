@@ -205,6 +205,24 @@
                 currentUsernameSpan.textContent = `Your username: ${currentUsername}`
             }
         })
+
+        send.sendButton.addEventListenes("click", sendMessage)
+        messageInput.addEventListener("keypress", () => {
+            if(e.key === "Enter") sendMessage()
+        })
+        updateUsernameButton.addEventListener("click", updateUsername)
+
+        function sendMessage() {
+
+        }
+
+        function addMessage() {
+
+        }
+        
+        function updateUsername() {
+
+        }
     </script>
 </body>
 </html>
