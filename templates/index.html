@@ -206,22 +206,63 @@
             }
         })
 
-        send.sendButton.addEventListenes("click", sendMessage)
+        sendButton.addEventListenes("click", sendMessage)
         messageInput.addEventListener("keypress", () => {
             if(e.key === "Enter") sendMessage()
         })
         updateUsernameButton.addEventListener("click", updateUsername)
 
         function sendMessage() {
+            const message = messageInput.value.trim()
 
+            if(message) {
+                socket.emit("send_message", { message })
+                messageInput.value = ""
+            }
         }
 
-        function addMessage() {
-
-        }
-        
         function updateUsername() {
+            const newUsername = usernameInput.value.trim()
 
+            if(newUsername && newUsername !== currentUsername) {
+                socket.emit("update_username", { username: newUsername })
+                usernameInput.value = ""
+            }
+        }
+
+        function addMessage(message,type,username="",avatar="") {
+            const messageElement = document.createElement("div")
+
+            if(type === "user") {
+                const isSentMessage = username === currentUsername
+
+                if (isSentMessage) {
+                    messageElement.classList.add("sent")
+                }
+
+                const avatarImg = document.createElement("img")
+                avatarImg.src = avatar
+                messageElement.appendChild(avatarImg)
+
+                const contentDiv = document.createElement("div")
+                contentDiv.className = "message-content"
+
+                const usernameDiv = document.createElement("div")
+                usernameDiv.className = "message-username"
+                usernameDiv.textContent = username
+                contentDiv.appendChild(usernameDiv)
+
+                const messageText = document.createElement("div")
+                messageText.textContent = message
+                contentDiv.appendChild(messageText)
+
+                messageElement.appendChild(contentDiv)
+            } else {
+                messageElement.className = "system-message"
+                messageElement.textContent = message
+            }
+
+            chatMessages.appendChild(messageElement)
         }
     </script>
 </body>
