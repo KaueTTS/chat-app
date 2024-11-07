@@ -18,9 +18,9 @@ def handle_connect():
         username = f"User_{random.randint(1000,9999)}"
         gender = random.choice(["girl","boy"])
         # https://avatar.iran.liara.run/public/boy?username=User_123
-        avatar_url = f"https://avatar.iran.liara.run/public/{gender}?username={username}"
+        avatar_url = f" https://avatar.iran.liara.run/public/{gender}?username={username}"
 
-        users[request.sid] = {"username":username,"avatar":avatar_url}
+        users[request.sid] = { "username":username,"avatar":avatar_url}
 
         emit("user_joined", {"username":username,"avatar":avatar_url},broadcast=True)
 
@@ -36,7 +36,7 @@ def handle_disconnect():
 
 @socketio.on("send_message")
 def handle_message(data):
-        user = user.get(request.sid)
+        user = users.get(request.sid)
         if user:
                 emit("new_message", {
                         "username":user["username"],
