@@ -180,13 +180,13 @@
         <div class="chat-header">Python Chat</div>
         <div class="username-container">
             <span id="current-username"></span>
-            <input type="text" id="username-input" placeholder="New username">
-            <button id="update-username-button">Update Username</button>
+            <input type="text" id="username-input" placeholder="Novo nickname">
+            <button id="update-username-button">Atualizar Nickname</button>
         </div>
         <div class="chat-messages" id="chat-messages"></div>
         <div class="chat-input">
-            <input type="text" id="message-input" placeholder="Type your message...">
-            <button id="send-button">Send</button>
+            <input type="text" id="message-input" placeholder="Escreva sua mensagem...">
+            <button id="send-button">Enviar</button>
         </div>
     </div>
 
@@ -203,15 +203,15 @@
 
         socket.on("set_username", (data) => {
             currentUsername = data.username
-            currentUsernameSpan.textContent = `Your username: ${currentUsername}`
+            currentUsernameSpan.textContent = `Seu nickname: ${currentUsername}`
         })
 
         socket.on("user_joined", (data) => {
-            addMessage(`${data.username} joined the chat`, "system")
+            addMessage(`${data.username} entrou no chat`, "system")
         })
 
         socket.on("user_left", (data) => {
-            addMessage(`${data.username} left the chat`, "system")
+            addMessage(`${data.username} saiu do chat`, "system")
         })
 
         socket.on("new_message", (data) => {
@@ -219,11 +219,11 @@
         })
 
         socket.on("username_updated", (data) => {
-            addMessage(`${data.old_username} changed their name to ${data.new_username}`, "system")
+            addMessage(`${data.old_username} trocou o nome para ${data.new_username}`, "system")
 
             if (data.old_username === currentUsername) {
                 currentUsername = data.new_username
-                currentUsernameSpan.textContent = `Your username: ${currentUsername}`
+                currentUsernameSpan.textContent = `Seu nickname: ${currentUsername}`
             }
         })
 
