@@ -9,7 +9,7 @@
 ### Tópicos
 
 - [Descrição do projeto](#descrição-do-projeto)
-  - [Funcionalidades Principais:](#funcionalidades-principais)
+  - [Funcionalidades Principais](#funcionalidades-principais)
 - [Tecnologias](#tecnologias)
 - [Projeto em funcionamento](#projeto-em-funcionamento)
 - [Como utilizar o projeto](#como-utilizar-o-projeto)
@@ -19,7 +19,7 @@
 
 Este projeto é um aplicativo de chat desenvolvido para conectar o front-end e o back-end, permitindo uma comunicação em tempo real e uma experiência interativa para o usuário.
 
-### Funcionalidades Principais:
+### Funcionalidades Principais
 > ***Alteração de Nome de Usuário:*** Permite ao usuário mudar seu apelido durante a conversa. <br>
 > ***Envio e Recebimento de Mensagens:*** Os usuários podem trocar mensagens instantaneamente. <br>
 > ***Notificações de Status:*** Exibe notificações quando um usuário entra, sai ou muda de nome na conversa.
