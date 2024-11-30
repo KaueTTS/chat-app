@@ -4,7 +4,8 @@
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20ANDAMENTO&color=0065fd&style=for-the-badge"/>
 </p>
 
-> 🔔 ***Nota:** Esse projeto pode ter alterações no futuro.*
+> [!NOTE]
+> *Esse projeto pode ter alterações no futuro.*
 
 ### Tópicos
 
