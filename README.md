@@ -35,7 +35,7 @@ Este chat app oferece uma interface simples e funcional, facilitando a comunica�
 
 ## Projeto em funcionamento
 
-Clique na imagem abaixo para assistir ao tutorial em vídeo!
+Clique na imagem abaixo para assistir ao tutorial em vídeo! **(EM BREVE)**
 
 [![Assista ao tutorial](image.png "Como utilizar esse projeto na sua máquina")](semvideo.com)
 
