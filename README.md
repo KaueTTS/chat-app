@@ -4,8 +4,8 @@
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/>
 </p>
 
-> [!NOTE]
-> *Esse projeto pode ter alterações no futuro.*
+> [!IMPORTANT]
+> *Esse projeto está concluído.*
 
 ### Tópicos
 
